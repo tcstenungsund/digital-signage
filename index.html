@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="refresh" content="30">
+
+        <title>Presentation</title> 
+        <style>
+            iframe{
+                position: absolute;
+                border: none;
+                width: 100vw;
+                height: 100vh;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+
+                z-index: -1;
+            }
+            h4{
+                margin: 0;
+            }
+            h4 a{
+                color: white;
+            }
+            p{
+                color: white;
+                margin: 10px 0 0 0;
+            }
+            section{
+                position: absolute;
+                width: 100%;
+                bottom: 0;
+                left: 0;
+            }
+            div{
+                width: 100%;
+                max-height: 10vh;
+                display: flex;
+                background-color: black;
+                overflow: hidden;
+                padding-top: 1%;
+            }
+           
+            div>div{
+                display: flex;
+                flex-direction: column;
+                margin: 0 1%;
+            }
+            div div img{
+                height: 75%;
+                filter: invert();
+            }
+        </style>
+    </head>
+    <body>
+        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSbnD-8MbUTV0NuLhm4IlebUlPA1lAITqMmXLFcfIgQ7Cd3ZnDCX3DXexzf60-eJYGZkOz5ZopoR6Xw/embed?start=true&loop=true&delayms=10000&rm=minimal"></iframe>
+        <section>
+            <div>
+                <div>
+                    <img src="images/logo.svg" alt="">
+                </div>
+                <div>
+                    <script src="https://rss.bloople.net/?url=https%3A%2F%2Fskolmaten.se%2Fnosnasgymnasiet%2Frss%2Fdays%2F%3Foffset%3D-1%26limit%3D2&limit=3&showtitle=false&showempty=true&type=js"></script>
+                </div>
+                <div>
+                    <script src="https://rss.bloople.net/?url=https%3A%2F%2Fskolmaten.se%2Fnosnasgymnasiet%2Frss%2Fdays%2F%3Foffset%3D1%26limit%3D1&limit=3&showtitle=false&showempty=true&type=js"></script>
+                </div>
+                <div>
+                    <script src="https://rss.bloople.net/?url=https%3A%2F%2Fskolmaten.se%2Fnosnasgymnasiet%2Frss%2Fdays%2F%3Foffset%3D2%26limit%3D1&limit=3&showtitle=false&showempty=true&type=js"></script>     
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
+
