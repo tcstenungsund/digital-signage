@@ -99,24 +99,22 @@ ul{
     height: 70vh;
 }
 .circles ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     padding-right: 0;
 }
 .circles li{
     border-radius: 50%;
     margin-bottom: 3vh;
+    font-size: 1.5em;
+    opacity: 0;
+    animation: fadein 3s forwards linear;
+    background: var(--circle-bg-color);
+    color: white;
+}
+.circles ul, .circles li{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: 1.5em;
-    opacity: 0;
-    animation: fadein 3s forwards linear;
-    background: black;
-    background: var(--circle-bg-color);
 }
 .circles li:nth-of-type(1) {
     background: var(--maincircle-bg-color);  
@@ -147,61 +145,47 @@ ul{
     flex-direction: column;
 }
 /*index*/
-.bubble {
-    grid-area: main-info;
-	height: 25vh;
-	width: 45vw;
-    margin-top: 25vh;
-	background: var(--bubble-bg-color);
-	display: flex;
-	border-radius: 1vh;
-}
-.pointer {
-	height: 6vw;
-	width: 6vw;
-	background: var(--bubble-bg-color);
-	transform: rotate(45deg);
-	border-radius: 0 0 1vw 0;
-	left: calc(0.5vw - 10vw);
-}
-.bubble2 {
-    grid-area: logo;
-	height: 5vh;
-	width: 45vw;
-	background: var(--bubble-bg-color);
-	display: flex;
-	border-radius: 1vh;
-}
-.pointer2 {
-    grid-area: logo;
-	height: 6vw;
-	width: 6vw;
-	background: var(--bubble-bg-color);
-	transform: rotate(45deg);
-	border-radius: 0 0 1vw 0;
-    clip-path: inset(7% 0 0 7%);
-	left: calc(0.5vw - 10vw);
-}
-.start-text {
-    grid-area: starttext;
+.main-info, .second-info, .main-text, .second-text{
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
+}
+.main-info{
     justify-content: center;
 }
-.start-text h2, .logo h2 {
+.main-text, .second-text{
+    --width: 6vw;
+    background: var(--bubble-bg-color);
     width: 45vw;
+    height: fit-content;
+    max-width: 45vw;
+    border-radius: 1vh;
+    position: relative;
+    padding: 0;
+    margin-bottom: - var(--width);
+    animation: fadein 5s forwards;
+}
+.main-text::after, .second-text::after{
+    content: "";
+    display: block;
+    background-color: var(--bubble-bg-color);
+    height: 6vw;
+    width: var(--width);
+    border-radius: 0 0 1vw 0;
+    position: relative;
+    bottom: calc(var(--width)/-2);
+    transform: rotate(45deg);
+}
+.main-text h2, .second-info h2 {
     color: burlywood;
     font-size: 2.5vw;
     text-align: center;
 }
-.start-text p{
-    width: 45vw;
+.main-text p{
     color: aliceblue;
     font-size: 1.7vw;
     text-align: center;
 }
-
 @font-face { 
     font-family: Hemi-head; src: url('../resources/hemi-head-bd-it.ttf'); 
 } 

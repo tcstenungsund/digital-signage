@@ -13,27 +13,15 @@ body{
     margin-right: 7.5vw;
     direction: rtl;
 }
+.main-text::after, .second-text::after{
+    right: calc(0.5vw - 10vw);
+}
 .info{
     direction: rtl;
 }
 .info ul{
-    margin-left: 38.5%;
     border-radius: 2em 0 0 2em;
-}
-.logo{
-    grid-area: logo;
-}
-.bubbleobj{
-    animation: fadein 5s forwards;
-    margin-left: 3vw;
-}
-.pointer{
-    margin-left: 35vw;
-    margin-top: -2vh;
-}
-.pointer2{
-    margin-left: 35vw;
-    margin-top: -2vh;
+    border-left: none;
 }
 @keyframes slide-in {
     0% {
