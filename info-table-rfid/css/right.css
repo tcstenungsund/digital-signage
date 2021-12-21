@@ -1,10 +1,13 @@
 body {
     grid-template-areas: 
-            "graph starttext"
+            "graph main-info"
             "info logo";
 }
-.graph svg {
-    transform: rotate(180deg) translateX(50%);
+*.graph svg {
+    transform: rotate(-180deg) translateX(50%);
+}
+#g18, #g1016, #g1203{
+    transform: rotate(360deg);
 }
 .graph ul{
     margin-left: 5em;
@@ -21,11 +24,21 @@ body {
     margin-left: 10vw;
     margin-top: -2vh;
 }
+.info{
+    direction: ltr;
+}
 .info ul{
     margin-right: 50%;
     border-radius: 0 2em 2em 0;
 }
 .logo {
     grid-area: logo;
-
+}
+@keyframes slide-in {
+    0% {
+        transform: translateX(-130%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
 }

@@ -4,94 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/left.css">
+    <link rel="stylesheet" href="css/right.css">
+
     <title>Project Fruit</title>
     <style>
-
-@font-face { font-family: Hemi head; src: url('hemi head bd it.ttf'); } 
-      body {
-         font-family: Hemi head
-      }
-
-
-
         @keyframes rotate1 {
             0% {
-                transform: rotate(0deg);
+                transform: rotate(initial);
             }
-
             100% {
-                transform: rotate(100deg);
+                transform: rotate(180deg);
             }
         }
-
         @keyframes rotate2 {
             0% {
-                transform: rotate(0deg);
+                transform: rotate(initial);
             }
-
             100% {
                 transform: rotate(110deg);
             }
         }
-
         @keyframes rotate3 {
             0% {
-                transform: rotate(0deg);
+                transform: rotate(initial);
             }
-
             100% {
                 transform: rotate(130deg);
             }
         }
-
-        @keyframes fadein {
-            0% {
-                opacity: 0;
-            }
-
-            100% {
-                opacity: 1;
-            }
-        }
-
-        @keyframes slide-in {
-            0% {
-                transform: translateX(130%);
-
-            }
-
-            100% {
-                transform: translateX(0%);
-            }
-        }
-     
     </style>
 </head>
 
 <body>
-
-
-
-
     <div class="circles">
-
         <div class="text">
-            <h1>CO2 Avtryck<br></h1><h2>Jämförelse</h2>
-            
+            <h1>CO2 Avtryck<br></h1><h2>Jämförelse</h2>   
         </div>
        
-         <ul>
-        <li style="width: calc(5em * 1.2); height: calc(5em * 1.2); color: rgb(255, 255, 255)">Äpple</li>
-        <li style="width: calc(5em * 1.4); height: calc(5em * 1.4); color: rgb(255, 255, 255)">Jordgubbar</li>
-        <li style="width: calc(5em * 1.6); height: calc(5em * 1.6); color: rgb(255, 255, 255)">Apelsin</li>
-        <li style="width: calc(5em * 1.8); height: calc(5em * 1.8); color: rgb(255, 255, 255)">Banan</li>
-        <li style="width: calc(5em * 2.0); height: calc(5em * 2.0); color: rgb(255, 255, 255)">Papaya</li>
-    </ul>
+        <ul>
+            <li style="width: calc(5em * 1.2); height: calc(5em * 1.2); color: rgb(255, 255, 255)">Äpple</li>
+            <li style="width: calc(5em * 1.4); height: calc(5em * 1.4); color: rgb(255, 255, 255)">Jordgubbar</li>
+            <li style="width: calc(5em * 1.6); height: calc(5em * 1.6); color: rgb(255, 255, 255)">Apelsin</li>
+            <li style="width: calc(5em * 1.8); height: calc(5em * 1.8); color: rgb(255, 255, 255)">Banan</li>
+            <li style="width: calc(5em * 2.0); height: calc(5em * 2.0); color: rgb(255, 255, 255)">Papaya</li>
+        </ul>
     </div>
 
     <div class="graph">
-
         <div class="container">
             <svg
                width="207.7713mm"
@@ -288,15 +249,10 @@
                <li>CO2 Transport</li>
                <li>CO2 Framställning</li>
             </ul>
-
-
-
         </div>
     </div>
 <!-- Här ändras frukten (h1) och Företaget eller landet där den kommer ifrån(h2) -->
     <div class="info">
-
-      
         <ul>
             <li>
                 <h1>Banan</h1>
@@ -310,6 +266,5 @@
     <div class="logo">
         <img src="TCstenungsund.png" alt="">
     </div>
-   
 </body>
 </html> 
