@@ -1,0 +1,31 @@
+body {
+    grid-template-areas: 
+            "graph starttext"
+            "info logo";
+}
+.graph svg {
+    transform: rotate(180deg) translateX(50%);
+}
+.graph ul{
+    margin-left: 5em;
+    direction: ltr;
+}
+.bubbleobj {
+    animation: fadein 5s forwards;
+}
+.pointer {
+    margin-left: 10vw;
+    margin-top: -2vh;
+}
+.pointer2 {
+    margin-left: 10vw;
+    margin-top: -2vh;
+}
+.info ul{
+    margin-right: 50%;
+    border-radius: 0 2em 2em 0;
+}
+.logo {
+    grid-area: logo;
+
+}
