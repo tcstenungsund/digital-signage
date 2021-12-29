@@ -20,17 +20,24 @@ h1{
 }
 h2{
     font-size: 2vw;
-    margin:.5em 0;
-}
+    margin: 1em 0 .5em 0;}
 p{
     font-size: 1vw;
     margin: .5em 0;
 }
+li{
+    margin: 1em 0;
+}
 .title{
+    opacity: 0;
+    animation: fade 2s forwards linear 1s;
     grid-area: title;
     height: 15vh;
 }
 .content{
+    opacity: 0;
+    animation: fade 2s forwards linear 3s;
+
     grid-area: content;
     height: 85vh;
     width: 50vw;
@@ -48,6 +55,8 @@ p{
     align-items: center;
 }
 .image{
+    opacity: 0;
+    animation: fade 2s forwards linear 5s;
     grid-area: img;
     height: 85vh;
     width: 50vw;
@@ -56,15 +65,21 @@ p{
     width: 85%;
     height: 85%;
 }
-
 .title, .content, .image{
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
 @font-face {
     font-family: "YaHei";
     src: url("../resources/yahei.ttf");
 }
-  
+@keyframes fade {
+    0% {
+        opacity: 0;
+
+    }
+    100% {
+        opacity: 1;
+    }
+}
