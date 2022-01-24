@@ -1,0 +1,54 @@
+body{
+    overflow: hidden;
+    transition: .5s ease;
+}
+iframe{
+    position: absolute;
+    border: none;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+section{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 15%;
+
+    color: #fff;
+
+    display: flex;
+    gap: 2vw;
+}
+img{
+    height: calc(100% - 1vw * 2);
+    margin: 1vw 1vw;
+}
+table{
+    margin: 1vw 0 0 0;
+    flex-basis: max-content;
+}
+span[style="float:right"]{
+    display: none;
+}
+tbody{
+    vertical-align: top;
+}
+tr td{
+ font-size: 1vw;   
+}
+tr:first-child td{
+    height: 1.5vw;
+    font-size: 1.5vw;
+}
+#clock{
+    margin: 1vw 0 0 0;
+    font-size: 3.5vw;
+    display: flex;
+    padding: 0 1vw;
+    flex: 1 1 20%;
+    justify-content: end;
+}

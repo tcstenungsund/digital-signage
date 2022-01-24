@@ -5,73 +5,44 @@
         <meta http-equiv="refresh" content="30">
 
         <title>Presentation</title> 
-        <style>
-            iframe{
-                position: absolute;
-                border: none;
-                width: 100vw;
-                height: 100vh;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                right: 0;
+        <link rel="stylesheet" href="css/style.css">
 
-                z-index: -1;
-            }
-            h4{
-                margin: 0;
-            }
-            h4 a{
-                color: white;
-            }
-            p{
-                color: white;
-                margin: 10px 0 0 0;
-            }
-            section{
-                position: absolute;
-                width: 100%;
-                bottom: 0;
-                left: 0;
-            }
-            div{
-                width: 100%;
-                max-height: 10vh;
-                display: flex;
-                background-color: black;
-                overflow: hidden;
-                padding-top: 1%;
-            }
-           
-            div>div{
-                display: flex;
-                flex-direction: column;
-                margin: 0 1%;
-            }
-            div div img{
-                height: 75%;
-                filter: invert();
-            }
-        </style>
+        
+
     </head>
-    <body>
+    <body onload="startTime()">
         <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSbnD-8MbUTV0NuLhm4IlebUlPA1lAITqMmXLFcfIgQ7Cd3ZnDCX3DXexzf60-eJYGZkOz5ZopoR6Xw/embed?start=true&loop=true&delayms=10000&rm=minimal"></iframe>
         <section>
-            <div>
-                <div>
-                    <img src="images/logo.svg" alt="">
-                </div>
-                <div>
-                    <script src="https://rss.bloople.net/?url=https%3A%2F%2Fskolmaten.se%2Fnosnasgymnasiet%2Frss%2Fdays%2F%3Foffset%3D0%26limit%3D1&limit=3&showtitle=false&showempty=true&type=js"></script>
-                </div>
-                <div>
-                    <script src="https://rss.bloople.net/?url=https%3A%2F%2Fskolmaten.se%2Fnosnasgymnasiet%2Frss%2Fdays%2F%3Foffset%3D1%26limit%3D1&limit=3&showtitle=false&showempty=true&type=js"></script>
-                </div>
-                <div>
-                    <script src="https://rss.bloople.net/?url=https%3A%2F%2Fskolmaten.se%2Fnosnasgymnasiet%2Frss%2Fdays%2F%3Foffset%3D2%26limit%3D1&limit=3&showtitle=false&showempty=true&type=js"></script>     
-                </div>
-            </div>
+            <img style="filter: invert();" src="images/logo.svg" alt="">
+
+            <script type="text/javascript" src="https://www.rssdog.com/index.php?url=https%3A%2F%2Fwww.skolmaten.se%2Fnosnasgymnasiet%2Frss%2Fdays%2F%3Foffset%3D0&amp;mode=javascript&amp;showonly=&amp;maxitems=0&amp;showdescs=1&amp;desctrim=0&amp;descmax=0&amp;tabwidth=100%25&amp;excltitle=1&amp;linktarget=_blank&amp;bordercol=transparent&amp;headbgcol=transparent&amp;headtxtcol=transparent&amp;titlebgcol=transparent&amp;titletxtcol=%23ffffff&amp;itembgcol=transparent&amp;itemtxtcol=%23ffffff&amp;ctl=0"></script>
+
+            <script type="text/javascript" src="https://www.rssdog.com/index.php?url=https%3A%2F%2Fwww.skolmaten.se%2Fnosnasgymnasiet%2Frss%2Fdays%2F%3Foffset%3D1&amp;mode=javascript&amp;showonly=&amp;maxitems=0&amp;showdescs=1&amp;desctrim=0&amp;descmax=0&amp;tabwidth=100%25&amp;excltitle=1&amp;linktarget=_blank&amp;bordercol=transparent&amp;headbgcol=transparent&amp;headtxtcol=transparent&amp;titlebgcol=transparent&amp;titletxtcol=%23ffffff&amp;itembgcol=transparent&amp;itemtxtcol=%23ffffff&amp;ctl=0"></script>
+
+            <script type="text/javascript" src="https://www.rssdog.com/index.php?url=https%3A%2F%2Fwww.skolmaten.se%2Fnosnasgymnasiet%2Frss%2Fdays%2F%3Foffset%3D2&amp;mode=javascript&amp;showonly=&amp;maxitems=0&amp;showdescs=1&amp;desctrim=0&amp;descmax=0&amp;tabwidth=100%25&amp;excltitle=1&amp;linktarget=_blank&amp;bordercol=transparent&amp;headbgcol=transparent&amp;headtxtcol=transparent&amp;titlebgcol=transparent&amp;titletxtcol=%23ffffff&amp;itembgcol=transparent&amp;itemtxtcol=%23ffffff&amp;ctl=0"></script>
+
+            <div id="clock"></div>
         </section>
+
+
+        <script>
+            function startTime() {
+                const today = new Date();
+                let h = today.getHours();
+                let m = today.getMinutes();
+                let s = today.getSeconds();
+                m = checkTime(m);
+                s = checkTime(s);
+                document.getElementById('clock').innerHTML =  h + ":" + m + ":" + s;
+                setTimeout(startTime, 1000);
+            }
+    
+            function checkTime(i) {
+                if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+                return i;
+            }
+        </script>
+
     </body>
 </html>
 
