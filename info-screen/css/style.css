@@ -1,7 +1,9 @@
 body{
     overflow: hidden;
     transition: .5s ease;
-    font-family: Arial;
+    font-family: Arial; 
+    text-shadow: 0.05vw 0.05vw rgb(139, 139, 139);
+    letter-spacing: 0.1vw;
 }
 a{
    text-decoration: none; 
@@ -21,9 +23,7 @@ section{
     bottom: 0;
     left: 0;
     height: 15%;
-
     color: #fff;
-
     display: flex;
     gap: 2vw;
 }
