@@ -1,6 +1,10 @@
 body{
     overflow: hidden;
     transition: .5s ease;
+    font-family: Arial;
+}
+a{
+   text-decoration: none; 
 }
 iframe{
     position: absolute;
@@ -51,4 +55,8 @@ tr:first-child td{
     padding: 0 1vw;
     flex: 1 1 20%;
     justify-content: end;
+}
+@font-face {
+    font-family: Arial;
+    src: url('../resources/fonts/arial.ttf');
 }
