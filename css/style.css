@@ -20,6 +20,9 @@ body{
     width: 100%;
     margin: 0;
     padding: 0;
+    background: url("../resources/images/tc-s_frilagd.svg") no-repeat;
+    background-position: center;
+    background-size: 50vw;
 }
 a{
    text-decoration: none; 
@@ -29,6 +32,9 @@ iframe{
     width: 100%;
     height: 100%;
     z-index: -1;
+    animation: fadeInAnimation ease 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 section{
     transform: translate(0, -105%);
@@ -37,6 +43,10 @@ section{
     color: #fff;
     display: flex;
     gap: 2vw;
+    transition: .5s ease;
+    animation: fadeInAnimation ease 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 img{
     height: calc(100% - 1vw * 2);
@@ -71,4 +81,16 @@ tr:first-child td{
 @font-face {
     font-family: Arial;
     src: url('../resources/fonts/arial.ttf');
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
