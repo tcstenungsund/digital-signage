@@ -65,7 +65,7 @@ tr:first-child td{
     display: flex;
     padding: 0 1%;
     flex: 1 1 fit-content;
-    justify-content: end;
+    justify-content: flex-end;
     height: 100%;
 }
 @font-face {
