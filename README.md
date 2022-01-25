@@ -1,10 +1,11 @@
 # Digital Signage
 ## Nösnäs/Teknikcollege Digital signage software/webpage 
+https://tcstenungsund.github.io/digital-signage/
 
-![GitHub last commit](https://img.shields.io/github/last-commit/klovaaxel/digital-signage)
-![GitHub repo size](https://img.shields.io/github/repo-size/klovaaxel/digital-signage)
-![GitHub release](https://img.shields.io/github/v/release/klovaaxel/digital-signage)
-![GitHub contributors](https://img.shields.io/github/contributors/klovaaxel/digital-signage)
+![GitHub last commit](https://img.shields.io/github/last-commit/tcstenungsund/digital-signage)
+![GitHub repo size](https://img.shields.io/github/repo-size/tcstenungsund/digital-signage)
+![GitHub release](https://img.shields.io/github/v/release/tcstenungsund/digital-signage)
+![GitHub contributors](https://img.shields.io/github/contributors/tcstenungsund/digital-signage)
 
 ## Raspberry Pi installation
 ### 1. Download startupbrowser.service
