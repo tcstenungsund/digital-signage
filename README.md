@@ -1,9 +1,14 @@
-# raspberry-pi-presentation-master
-Base/Master for presentation scripts for raspberry pi
+# Digital Signage
+## Nösnäs/Teknikcollege Digital signage software/webpage 
 
-## installation
+![GitHub last commit](https://img.shields.io/github/last-commit/klovaaxel/digital-signage)
+![GitHub repo size](https://img.shields.io/github/repo-size/klovaaxel/digital-signage)
+![GitHub release](https://img.shields.io/github/v/release/klovaaxel/digital-signage)
+![GitHub contributors](https://img.shields.io/github/contributors/klovaaxel/digital-signage)
+
+## Raspberry Pi installation
 ### Step 1
-Put git repo in Documents (or edit path in startupbrowser.service)
+Download startupbrowser.service to your raspberry pi
 
 ### Step 2
 Move startupbrowser.service to "/etc/systemd/system/"
@@ -15,3 +20,10 @@ sudo systemctl enable startupbrowser.service
 ### Step 4
 Reboot the Pi
 sudo systemctl reboot  
+
+## Contributors
+
+Thanks to the following people who have contributed to this project:
+
+* [MonitorUF](#)
+* [@klovaaxel](https://github.com/seetee)
