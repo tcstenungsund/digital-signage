@@ -7,17 +7,17 @@
 ![GitHub contributors](https://img.shields.io/github/contributors/klovaaxel/digital-signage)
 
 ## Raspberry Pi installation
-### Step 1
+### 1. Step 1
 Download startupbrowser.service to your raspberry pi
 
-### Step 2
+### 2. Step 2
 Move startupbrowser.service to "/etc/systemd/system/"
 
-### Step 3
+### 3. Step 3
 Enable service with:
 sudo systemctl enable startupbrowser.service 
 
-### Step 4
+### 4. Step 4
 Reboot the Pi
 sudo systemctl reboot  
 
