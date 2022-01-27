@@ -17,7 +17,7 @@ body{
     aspect-ratio: 16/9;
     max-width: 100vw;
     max-height: 100vh;
-    width: 100%;
+    width: max-content;
     margin: 0;
     padding: 0;
     background: url("../resources/images/tc-s_frilagd.svg") no-repeat;
