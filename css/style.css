@@ -23,6 +23,7 @@ body{
     background: url("../resources/images/tc-s_frilagd.svg") no-repeat;
     background-position: center;
     background-size: 50vw;
+    flex: 1 1 min-content;
 }
 a{
    text-decoration: none; 
