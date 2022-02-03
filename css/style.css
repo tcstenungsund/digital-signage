@@ -75,9 +75,9 @@ tr:first-child td{
     font-size: 3vmax;
     display: flex;
     padding: 0 1%;
-    flex: 1 1 fit-content;
+    flex: 1 1;
     justify-content: flex-end;
-    height: 100%;
+    align-items: flex-end;
 }
 @font-face {
     font-family: Arial;
