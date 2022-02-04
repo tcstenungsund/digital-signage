@@ -23,7 +23,7 @@ body{
     background: url("../resources/images/tc-s_frilagd.svg") no-repeat;
     background-position: center;
     background-size: 50vw;
-    flex: 1 1 min-content;
+    flex: 1 1;
 }
 a{
    text-decoration: none; 
@@ -74,7 +74,7 @@ tr:first-child td{
     margin: 1% 0 0 0;
     font-size: 3vmax;
     display: flex;
-    padding: 0 1%;
+    padding: 1% 1%;
     flex: 1 1;
     justify-content: flex-end;
     align-items: flex-end;
