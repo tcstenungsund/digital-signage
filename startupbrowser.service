@@ -6,6 +6,7 @@ After=graphical.target
 User=pi
 WorkingDirectory=/home/pi
 Environment=DISPLAY=:0
+ExecStartPre=/bin/sleep 30
 ExecStart=/usr/bin/chromium-browser --start-fullscreen ~/Documents/raspberrt-pi-presentation-master/index
 
 [Install]
