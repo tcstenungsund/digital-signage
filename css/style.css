@@ -1,87 +1,50 @@
-html{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+html {
+    height: 100%;
     width: 100vw;
-    background-color: black;
-    
-}
-body{
     overflow: hidden;
-    transition: .5s ease;
-    font-family: Arial; 
-    text-shadow: 0.05vw 0.05vw rgb(139, 139, 139);
-    letter-spacing: 0.1vw;
-    aspect-ratio: 16/9;
+    background-color: black;
+}
+body {
+    position: relative;
+    padding: 0;
+    margin: 0 auto;
     max-width: 100vw;
     max-height: 100vh;
-    width: max-content;
-    margin: 0;
-    padding: 0;
+    aspect-ratio: 16/9;
+    top: 50%;
+    transform: translateY(-50%);
     background: url("../resources/images/tc-s_frilagd.svg") no-repeat;
     background-position: center;
     background-size: 50vw;
-    flex: 1 1;
+    text-shadow: 0.05vw 0.05vw rgb(139, 139, 139);
+    font-family: Arial;
+    transition: 0.5s ease;
 }
-a{
-   text-decoration: none; 
-}
-iframe{
-    border: none;
+iframe {
     width: 100%;
     height: 100%;
-    z-index: -1;
-    animation: fadeInAnimation ease 5s;
+    margin: 0;
+    padding: 0;
+    border: none;
+    animation: fadeInAnimation ease 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
-section{
-    transform: translate(0, -105%);
-    width: 100%;
-    height: 15%;
+footer {
+    position: absolute;
+    bottom: 0;
+    width: auto;
     color: #fff;
-    display: flex;
-    gap: 2vw;
-    transition: .5s ease;
-    animation: fadeInAnimation ease 5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
 }
-img{
-    height: calc(100% - 1vw * 2);
-    margin: 1% 1%;
+footer > img {
 }
-table{
-    margin: 1vw 0 0 0;
-    flex-basis: fit-content;
-}
-span[style="float:right"]{
-    display: none;
-}
-tbody{
-    vertical-align: top;
-}
-tr td{
-    font-size: .9vmax;   
-}
-tr:first-child td{
-    height: 0;
-    font-size: 1.3vmax;
-}
-#clock{
-    margin: 1% 0 0 0;
+#clock {
     font-size: 3vmax;
-    display: flex;
-    padding: 1% 1%;
-    flex: 1 1;
-    justify-content: flex-end;
-    align-items: flex-end;
 }
+
 @font-face {
     font-family: Arial;
-    src: url('../resources/fonts/arial.ttf');
+    src: url("../resources/fonts/arial.ttf");
 }
 
 @keyframes fadeInAnimation {
