@@ -12,7 +12,7 @@
             src="https://docs.google.com/presentation/d/e/2PACX-1vQbS6bGPlyTibcjsUPI1uHspUBsRSv_z_dVast1ZTcZ9Qt_GqXeHU0xWxluPZ2yCL9kftF0frYksy2h/embed?start=true&loop=true&delayms=10000&rm=minimal"
         ></iframe>
         <footer>
-            <!-- <img style="filter: invert()" src="resources/images/logo.svg" alt="" /> -->
+            <img style="filter: invert()" src="resources/images/logo.svg" alt="" />
             <section id="food-schedule" title="Food schedule"></section>
             <section id="clock" title="Digital Clock"></section>
         </footer>
@@ -39,30 +39,49 @@
 
         <script title="Food schedule">
             AddFoodSchedule(3);
+
             function AddFoodSchedule(numDays) {
-                baseUrl = "https://www.skolmaten.se/nosnasgymnasiet/rss/days/";
+                numDays = numDays - 1;
+                baseUrl = `https://corsproxy.io/?https://www.skolmaten.se/nosnasgymnasiet/rss/days/`;
 
-                for (let index = 0; index < numDays; index++) {
-                    url = `${baseUrl}?offset=${index}`;
+                url = `${baseUrl}?offset=${numDays}`;
 
-                    const request3 = fetch(url)
-                        .then((response) => response.text())
-                        .then((str) => new window.DOMParser().parseFromString(str, "text/xml"))
-                        .then((data) => {
-                            const title = document.createElement("h3");
-                            title.text = data.getElementsByTagName("title").text;
+                const request3 = fetch(url, {
+                    method: "GET",
+                    cache: "no-cache",
+                    headers: new Headers({
+                        Accept: "Text",
+                        "Access-Control-Allow-Origin": "http://localhost:5000/",
+                        "Content-Type": "application/json",
+                    }),
+                })
+                    .then((response) => response.text())
+                    .then((str) => new window.DOMParser().parseFromString(str, "text/xml"))
+                    .then((data) => {
+                        const item = data.getElementsByTagName("item")[0];
 
-                            const body = document.createElement("p");
-                            body.text = data.getElementsByTagName("description").text;
+                        const title = document.createElement("h3");
+                        title.innerHTML = item.getElementsByTagName("title")[0].innerHTML;
 
-                            const section = document.createElement("section");
-                            section.appendChild(title);
-                            section.appendChild(body);
+                        const body = document.createElement("p");
+                        let content = item.getElementsByTagName("description")[0].innerHTML;
+                        content = content.replace("<![CDATA[", "");
+                        content = content.replace("]]>", "");
+                        body.innerHTML = content;
 
-                            const foodScheduleContainer = document.getElementById("food-schedule");
-                            foodScheduleContainer.appendChild(section);
-                        });
-                }
+                        const section = document.createElement("section");
+                        section.appendChild(title);
+                        section.appendChild(body);
+
+                        const foodScheduleContainer = document.getElementById("food-schedule");
+                        foodScheduleContainer.prepend(section.cloneNode(true));
+                    })
+                    .then(() => {
+                        if (numDays != 0) {
+                            AddFoodSchedule(numDays);
+                        }
+                    })
+                    .catch(console.error);
             }
         </script>
     </body>
