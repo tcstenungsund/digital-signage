@@ -1,4 +1,4 @@
-name: Get Food Schedule
+name: Get Food Schedule 🍔
 on:
   schedule:
   - cron: "0 1 * * 1-5"
