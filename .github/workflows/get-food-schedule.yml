@@ -3,7 +3,7 @@ on:
   schedule:
   - cron: "0 1 * * 1-5"
 env: # Or as an environment variable
-    CLIENT_ID: ${{ secret.SKOLMATEN_CLIENT_ID }}
+    CLIENT_ID: ${{ secrets.SKOLMATEN_CLIENT_ID }}
 jobs:
   refresh-feed:
     runs-on: ubuntu-latest
