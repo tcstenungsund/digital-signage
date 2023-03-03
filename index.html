@@ -40,45 +40,36 @@
         <script title="Food schedule">
             AddFoodSchedule(3);
 
+            var weekDays = ["Måndag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lördag", "Söndag"];
+            const today = new Date(
+                new Date().getFullYear(),
+                new Date().getMonth(),
+                new Date().getDate()
+            ).getTime();
+
             function AddFoodSchedule(numDays) {
-                numDays = numDays - 1;
-                baseUrl = `https://corsproxy.io/?https://www.skolmaten.se/nosnasgymnasiet/rss/days/`;
-
-                url = `${baseUrl}?offset=${numDays}`;
-
-                const request3 = fetch(url, {
-                    method: "GET",
-                    cache: "no-cache",
-                    headers: new Headers({
-                        Accept: "Text",
-                        "Access-Control-Allow-Origin": "http://localhost:5000/",
-                        "Content-Type": "application/json",
-                    }),
-                })
-                    .then((response) => response.text())
-                    .then((str) => new window.DOMParser().parseFromString(str, "text/xml"))
+                fetch("food-schedule/data.json")
+                    .then((response) => response.json())
                     .then((data) => {
-                        const item = data.getElementsByTagName("item")[0];
-
-                        const title = document.createElement("h3");
-                        title.innerHTML = item.getElementsByTagName("title")[0].innerHTML;
-
-                        const body = document.createElement("p");
-                        let content = item.getElementsByTagName("description")[0].innerHTML;
-                        content = content.replace("<![CDATA[", "");
-                        content = content.replace("]]>", "");
-                        body.innerHTML = content;
-
-                        const section = document.createElement("section");
-                        section.appendChild(title);
-                        section.appendChild(body);
+                        const allDays = data.weeks[0].days;
+                        const comingDays = allDays.filter((d) => new Date(d.date * 1000) >= today);
+                        const chosenDays = comingDays.slice(0, numDays);
 
                         const foodScheduleContainer = document.getElementById("food-schedule");
-                        foodScheduleContainer.prepend(section.cloneNode(true));
-                    })
-                    .then(() => {
-                        if (numDays != 0) {
-                            AddFoodSchedule(numDays);
+
+                        for (const day of chosenDays) {
+                            const title = document.createElement("h3");
+                            const dayOfWeek = new Date(day.date).getDay();
+                            title.innerHTML = `${weekDays[dayOfWeek]} - Vecka ${data.weeks[0].number}`;
+
+                            const body = document.createElement("p");
+                            body.innerHTML = day.items.join(", ");
+
+                            const section = document.createElement("section");
+                            section.appendChild(title);
+                            section.appendChild(body);
+
+                            foodScheduleContainer.prepend(section.cloneNode(true));
                         }
                     })
                     .catch(console.error);
