@@ -54,12 +54,17 @@ footer > section {
     gap: 3em;
 }
 
-h2 {
+footer > section h3 {
     font-size: min(1.6em, 1.6vw);
+    margin: 0;
+}
+
+footer > section p {
+    margin: 0;
 }
 
 #clock {
-    font-size: 3em;
+    font-size: min(4em, 4vw);
     justify-self: flex-end;
     margin-left: auto;
 }
