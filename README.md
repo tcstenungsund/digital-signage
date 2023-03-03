@@ -1,4 +1,5 @@
 # Digital Signage
+
 [![Is the food schedule updated](https://github.com/klovaaxel/digital-signage-fork/actions/workflows/get-food-schedule.yml/badge.svg)](https://github.com/klovaaxel/digital-signage-fork/actions/workflows/get-food-schedule.yml)
 ![GitHub last commit](https://img.shields.io/github/last-commit/tcstenungsund/digital-signage)
 ![GitHub repo size](https://img.shields.io/github/repo-size/tcstenungsund/digital-signage)
@@ -7,15 +8,21 @@
 
 [Take a peek at the finished product!](https://tcstenungsund.github.io/digital-signage/)
 
+## Running the webpage ⚡
 
-## Raspberry Pi installation
-When choosing OS for the pi it is recomended that you choose [FullPageOS](https://github.com/guysoft/FullPageOS).
+### RaspberryPi
 
-Remember to set your WiFi information, and URL in the config files before boot and also ***change the SSH username and password*** when it's booted
+The recomended OS is [FullPageOS](https://github.com/guysoft/FullPageOS) as it allows you to display the digital signage webpage in fullscreen/kiosk mode on boot!
 
-## Contributors
+Remember to set your WiFi information, and URL in the config files before boot and also **_change the SSH username and password_** when it's booted
+
+## Want to contribute? 🙌
+
+Create a fork, make your changes, create a pull request, wait for feeback! 🤞
+
+### Contributors 🔥
 
 Thanks to the following people who have contributed to this project:
 
-* [MonitorUF](#)
-* [@klovaaxel](https://github.com/klovaaxel)
+-   [MonitorUF](#)
+-   [@klovaaxel](https://github.com/klovaaxel)
