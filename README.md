@@ -24,5 +24,6 @@ Create a fork, make your changes, create a pull request, wait for feeback! 🤞
 
 Thanks to the following people who have contributed to this project:
 
--   [MonitorUF](#)
--   [@klovaaxel](https://github.com/klovaaxel)
+<a href="https://github.com/tcstenungsund/digital-signage/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=tcstenungsund/digital-signage" />
+</a>
