@@ -14,4 +14,4 @@ jobs:
         with:
           endpoint: https://www.skolmaten.se/api/3/menu/?school=6527553372160000
           configuration: '{ "method": "GET", "headers": {"client": "${{ secrets.SKOLMATEN_CLIENT_ID }}"} }'
-          save-location: food-schedule/data.json
+          save-location: food-schedule/
