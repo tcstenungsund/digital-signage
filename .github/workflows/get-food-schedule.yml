@@ -14,4 +14,11 @@ jobs:
         with:
           endpoint: https://www.skolmaten.se/api/3/menu/?school=6527553372160000
           configuration: '{ "method": "GET", "headers": {"client": "${{ secrets.SKOLMATEN_CLIENT_ID }}"} }'
-          save-location: food-schedule/
+
+      - name: Build and Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: master # Pushes the updates to the master branch.
+          FOLDER: fetch-api-data-action # The location of the data.json file saved by the Fetch API Data action.
+          TARGET_FOLDER: food-schedule # Saves the data into the 'data' directory on the master branch.
