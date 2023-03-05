@@ -26,4 +26,5 @@ jobs:
       - name: Version Updater ✨
         uses: erlete/version-updater@v1.1
         with:
+          token: ${{ secrets.ACCESS_TOKEN }}
           target-file: "package.json"
