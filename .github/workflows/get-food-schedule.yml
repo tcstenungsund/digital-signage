@@ -22,11 +22,3 @@ jobs:
           BRANCH: main # Pushes the updates to the master branch.
           FOLDER: fetch-api-data-action # The location of the data.json file saved by the Fetch API Data action.
           TARGET_FOLDER: food-schedule # Saves the data into the 'data' directory on the master branch.
-     
-      - name:  'Automated Version Bump'
-        uses:  'phips28/gh-action-bump-version@master'
-        env:
-          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        with:
-          version-type:  'patch'
-
