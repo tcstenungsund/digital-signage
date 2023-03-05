@@ -24,7 +24,6 @@ jobs:
           TARGET_FOLDER: food-schedule # Saves the data into the 'data' directory on the master branch.
      
       - name: Version Updater ✨
-        uses: erlete/version-updater@v1.1
+        uses: erlete/version-updater@v2.0
         with:
-          token: ${{ secrets.ACCESS_TOKEN }}
           target-file: "package.json"
