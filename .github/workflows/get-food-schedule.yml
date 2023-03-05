@@ -24,9 +24,6 @@ jobs:
           TARGET_FOLDER: food-schedule # Saves the data into the 'data' directory on the master branch.
      
       - name: Version Updater ✨
-        # You may pin to the exact commit or the version.
-        # uses: erlete/version-updater@256046eef79bef98ce2a41961b2ef2f3065bc2da
-        uses: erlete/version-updater@v2.0
+        uses: erlete/version-updater@v1.1
         with:
-          # The file that contains package metadata.
-          target-file:  ./VERSION
+          target-file: "package.json"
